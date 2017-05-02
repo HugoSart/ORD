@@ -8,7 +8,6 @@ int get_rec(FILE *file, char buffer[]) {
         return 0;
 
     fread(buffer, rec_lenght, 1, file);
-
     return rec_lenght;
 
 }

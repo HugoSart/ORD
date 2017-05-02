@@ -3,24 +3,26 @@
 
 int main() {
 
-    FILE *file = fopen("OUTPUT", "w");
+    char buffer[200];
+
+    char file_name[30], last_name[30], name[30], address[30], city[30], state[30], zip[30];
+
+    printf("=========== Writerec ===========\n\n");
+
+    printf("  Nome do arquivo de saida: ");
+    __fpurge(stdin);    scanf("%[^\n]", file_name);
+    FILE *file = fopen(file_name, "w");
 
     if (fopen == NULL) {
         printf("ERROR: File is null.");
     }
-
-    char buffer[200];
-
-    char last_name[30], name[30], address[30], city[30], state[30], zip[30];
-
-    printf("=========== Writerec ===========\n\n");
 
     char r;
 
     do {
         buffer[0] = '\0';
 
-        printf("  Nome: ");
+        printf("\n  Nome: ");
         __fpurge(stdin); scanf("%[^\n]", name);
         printf("  Insira o sobrenome: ");
         __fpurge(stdin); scanf("%[^\n]", last_name);

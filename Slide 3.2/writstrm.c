@@ -38,7 +38,7 @@ int main() {
         printf("\nCidade\n>>>");
         fgets(city, 20, stdin);
         city[strlen(city)-1] = '\0';
-		printf("\nEstado\n>>>");
+		    printf("\nEstado\n>>>");
         fgets(state, 15, stdin);
         state[strlen(state)-1] = '\0';
         printf("\nCEP\n>>>");
